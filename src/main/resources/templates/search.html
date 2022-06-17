@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+<form method="POST" th:action="@{/find}" th:object="${searchForm}">
+    Title:
+    <input type="text" th:field = "*{title}"/><br/>
+    Author:
+    <input type="text" th:field = "*{author}"/><br/>
+    Genre:
+    <input type="text" th:field = "*{genre}"/><br/>
+    <input type="submit" value="find"/>
+</form>
+</body>
+</html>
